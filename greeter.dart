@@ -56,7 +56,7 @@ void main() {
   String anrede = gender();
 
   if (age < 40) {
-    print('Hallo, $anrede $userName $userSurname!');
+    print('Hallo, $userName!');
   } else {
     int stunde = DateTime.now().hour;
     String tageszeit;
