@@ -1,5 +1,5 @@
-import 'dart:math'; // Para Random [1]
-import 'dart:io';   // Para stdin y stdout [1, 4]
+import 'dart:math'; // Libreria que coge numeros aleatorios [1]
+import 'dart:io';   // Para stdin y stdout  se puede interactuar que el usuario y ver lo que escribe[1, 4]
 
 void main() {
   int? maxThrows;
