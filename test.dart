@@ -9,7 +9,7 @@ void main1(List argument) {
   }
 }
 
-void main(List<String> arguments) {
+void main3(List<String> arguments) {
   if (arguments.isNotEmpty) {
     String joined = arguments.first;
     // for (var i = 1; i < arguments.length; i++) {
@@ -20,4 +20,13 @@ void main(List<String> arguments) {
   } else {
     print ('Hallo!');
   }
+}
+
+void main(){
+  int numero = 1;
+
+while (numero <= 3) {
+  print("Número: $numero");
+  numero++;
+}
 }
