@@ -12,7 +12,7 @@ void main() {
     }
   }
   final rnd = Random();
-  print('Dein wahlt ist: $zahl');
+  print('Ziel erreicht 2 mal ergiebness 6: $zahl');
   final alleWurfel = <int>[];
   for (var i = 0; i < zahl; i++) {
     final wurf = rnd.nextInt(6) + 1;
