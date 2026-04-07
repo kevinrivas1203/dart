@@ -26,3 +26,43 @@ void main() {
   }
   print('Alle Würfel: $alleWurfel');
 }
+
+import 'dart:io';
+
+
+String compress(String input) {
+  String ergebnis = '';
+  String aktuellerBuchstabe = input[0];
+  int anzahl = 1;
+
+  for (int i = 1; i < input.length; i++) {
+    if (input[i] == aktuellerBuchstabe) {
+      anzahl ++;
+    } else {
+      if (anzahl >= 3) {
+        ergebnis += '$aktuellerBuchstabe$anzahl';
+      } else {
+        ergebnis += aktuellerBuchstabe * anzahl;
+      }
+      aktuellerBuchstabe = input[i];
+      anzahl = 1;
+    }
+  } 
+    if (anzahl >= 3) {
+        ergebnis += '$aktuellerBuchstabe$anzahl';
+      } else {
+        ergebnis += aktuellerBuchstabe * anzahl;
+      }
+      return ergebnis;
+}
+
+void main(List<String>args) {
+  if (args.isEmpty) {
+    print('Bite einen String eingeben: ');
+    String input = stdin.readLineSync() ?? '';
+    print(compress(input));
+  } else {
+    String input = args[0];
+    print(compress(input));
+  }
+}
